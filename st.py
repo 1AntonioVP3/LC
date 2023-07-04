@@ -143,9 +143,9 @@ def mostrar_mensaje_final():
     """
     st.markdown(mensaje, unsafe_allow_html=True)
 
-palabra=st.selectbox('Elige un verbo a conjugar', ['am', 'pewk','melih','w','ley','kutx','ray','pay','metx','ruk','lawen','ralün','eymi','kaxo','fe','welu','lafken','kisu','anum','trawün'])
-numero_adivinar=st.selectbox("Seleccionar una opción de número:", ["singular","dual","plural"])
-persona_adivinar=st.selectbox("Seleccionar una opción de persona:",[1,2,3])
+palabra=st.selectbox('Selecciona un verbo a conjugar:', ['am', 'pewk','melih','w','ley','kutx','ray','pay','metx','ruk','lawen','ralün','eymi','kaxo','fe','welu','lafken','kisu','anum','trawün'])
+numero_adivinar=st.selectbox("Selecciona una opción de número gramatical:", ["singular","dual","plural"])
+persona_adivinar=st.selectbox("Selecciona una opción de persona gramatical:",[1,2,3])
 texto_negrita = "Ahora te toca a ti probar cómo vas con las conjugaciones en esta lengua. Aquí te dejo una opción divertida para que sigas aprendiendo. Deberás escoger un verbo y luego escribir su conjugación, y nosotros te diremos la conjugación correcta, así como el número y la persona gramatical que tiene tu conjugación. ¡Suerte!"
 st.markdown(f"**{texto_negrita}**")
 palabra_conjugada=st.text_input(label="Ingresar verbo conjugado")
