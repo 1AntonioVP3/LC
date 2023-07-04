@@ -49,8 +49,6 @@ Explora más sobre la lengua mapudungun y disfruta de su riqueza cultural y ling
 
 ¡Bienvenidos al mundo del mapudungun! :smile:
 """
-#i=Image.open('DICT.png')
-#st.image(i)
 
 #####4 TO PASO: Estableciendo FONDO DE LA APP:
 def add_bg_from_local(image_file):
@@ -144,8 +142,8 @@ def mostrar_mensaje_final():
     st.markdown(mensaje, unsafe_allow_html=True)
 
 palabra=st.selectbox('Elige un verbo a conjugar', ['am', 'pewk','melih','w','ley','kutx','ray','pay','metx','ruk','lawen','ralün','eymi','kaxo','fe','welu','lafken','kisu','anum','trawün'])
-numero_adivinar=st.selectbox("Seleccionar una opción:", ["singular","dual","plural"])
-persona_adivinar=st.selectbox("Seleccionar una opción:",[1,2,3])
+numero_adivinar=st.selectbox("Seleccionar una opción de número:", ["singular","dual","plural"])
+persona_adivinar=st.selectbox("Seleccionar una opción de persona:",[1,2,3])
 texto_negrita = "Ahora te toca a ti probar cómo vas con las conjugaciones en esta lengua. Aquí te dejo una opción divertida para que sigas aprendiendo. Deberás escoger un verbo y luego escribir su conjugación, y nosotros te diremos la conjugación correcta, así como el número y la persona gramatical que tiene tu conjugación. ¡Suerte!"
 st.markdown(f"**{texto_negrita}**")
 palabra_conjugada=st.text_input(label="Ingresar verbo conjugado")
@@ -163,10 +161,10 @@ if st.button('Conjugar'):
         st.write("¡Bien hecho, la palabra ingresada corresponde a la conjugación seleccionada")
         st.write("Con la persona:",persona_conjugacion)
         st.write("Y número de conjugación:",numero_conjugacion)
-        st.write("Palabra conjugada:",palabra_conjugacion)
+        st.write("Y corresponde a la palabra conjugada:",palabra_conjugacion)
     else:
         st.write("Lo lamentamos, la palabra que ingresaste no es correcta, debería ser:",palabra_adivinar)
         st.write("La que ingresaste tiene persona:",persona_conjugacion)
         st.write("Y número de conjugación:",numero_conjugacion)
-        st.write("Palabra conjugada:",palabra_conjugacion)
+        st.write("Y corresponde a la palabra conjugada:",palabra_conjugacion)
 mostrar_mensaje_final()
