@@ -100,6 +100,10 @@ def mostrar_verbos():
     for verbo, traduccion in verbos.items():
         st.write(f"- {verbo}: {traduccion}")
 
+texto_negrita = "Ahora te toca a ti probar cómo vas con las conjugaciones en esta lengua. Aquí te dejo una opción divertida para que sigas aprendiendo. Deberás escoger un verbo y luego escribir su conjugación, y nosotros te diremos la conjugación correcta, así como el número y la persona gramatical que tiene tu conjugación. ¡Suerte!"
+
+st.markdown(f"**{texto_negrita}**")
+
 def conjugar_verbo(palabra,persona,numero):
     if palabra== '': 
         palabra='hola'
